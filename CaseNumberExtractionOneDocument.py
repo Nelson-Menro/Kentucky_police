@@ -27,11 +27,15 @@ for page_number, page_data in tqdm(enumerate(doc)):
     allText=("Page # {} - {}".format(str(page_number),txt))
     #Regex designed to find case number on given page
     x = re.findall("....-cv[^\s]+", allText)
-    
-    #Continues the loop if case number not found or if tesseract grabs number wrong
-    if not x or len(x[0])!=17:
+    #Alternate regex for other format
+    y = re.findall("Case No..............",allText)
+    if (not x or len(x[0])!=17) and not y:
         continue
     else:
-        #Outputs case number and ends search
-        print(x)
+        if not x:
+            #First instance
+            print(y[0])
+        else:
+            #Prints first instance
+            print(x[0])
         break
