@@ -26,7 +26,7 @@ for page_number, page_data in tqdm(enumerate(doc)):
 
     allText=("Page # {} - {}".format(str(page_number),txt))
     #Regex designed to find case number on given page
-    x = re.findall("....-cv[^\s]+", allText)
+    x = re.findall("....-c.[^\s]+", allText)
     #Alternate regex for other format
     y = re.findall("Case No..............",allText)
     if (not x or len(x[0])!=17) and not y:
