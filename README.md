@@ -21,8 +21,9 @@
         Guide via https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i
         
 2. Ensure Poppler is installed in environment variables
-   2.1 Download the following https://github.com/oschwartz10612/poppler-windows/releases
-   2.2 Extract to C:/Program Files
-   2.3 Add C://Program Files/poppler-21.10.1/Library/bin to environment variables
+
+2.1 Download the following https://github.com/oschwartz10612/poppler-windows/releases
+2.2 Extract to C:/Program Files
+2.3 Add C://Program Files/poppler-21.10.1/Library/bin to environment variables
 
 Then script will be able to be run as normal
