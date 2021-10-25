@@ -3,8 +3,9 @@
 
 # HOW TO PREPARE TO EXTRACT TEXT FROM IMAGES
 
-1. First prepare use of tesseract
-   1.1   1 - You need to have Tesseract OCR installed on your computer.
+1. First prepare use of tesseract  
+   
+            1 - You need to have Tesseract OCR installed on your computer.
 
             get it from here. https://github.com/UB-Mannheim/tesseract/wiki
 
