@@ -33,7 +33,7 @@ for page_number, page_data in tqdm(enumerate(doc)):
     if x:
         x[0]=x[0].split("\\n",1)[0]
    #Removes the phrase "Case No" from y regex
-    if y:
+    elif y:
         y[0]=y[0].split(": ",1)[1]
     if (not x or not(len(x[0])>=16 and len(x[0])<=17)) and not y:
         continue
