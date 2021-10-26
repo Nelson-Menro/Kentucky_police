@@ -29,7 +29,7 @@ for page_number, page_data in tqdm(enumerate(doc)):
     x = re.findall("....-c.[^\s]+", allText)
     #Alternate regex for other format
     y = re.findall("Case No..............",allText)
-    if (not x or len(x[0])!=17) and not y:
+   if (not x or not(len(x[0])>=16 and len(x[0])<=17)) and not y:
         continue
     else:
         if not x:
