@@ -29,6 +29,9 @@ for page_number, page_data in tqdm(enumerate(doc)):
     x = re.findall("....-c.[^\s]+", allText)
     #Alternate regex for other format
     y = re.findall("Case No..............",allText)
+    #Removes trailing characters from tesseract
+    x[0]=x[0].split("\\n",1)[0]
+
    if (not x or not(len(x[0])>=16 and len(x[0])<=17)) and not y:
         continue
     else:
