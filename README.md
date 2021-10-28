@@ -35,3 +35,5 @@
 2.3 Add C://Program Files/poppler-21.10.1/Library/bin to environment variables
 
 Then script will be able to be run as normal
+
+3. Restart your PC
