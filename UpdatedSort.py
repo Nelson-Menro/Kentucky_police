@@ -38,15 +38,20 @@ for filepath in tqdm(glob.iglob(r'C:\Users\steel\Documents\NACDL\*.pdf')):
             y = re.findall("Case No..............",currentPage)
             if x:
                 x[0]=x[0].split("\\n",1)[0]
-            elif y and len(y)>1:
+            elif y:
                 print(y)
-                y[0]=y[0].split(": ",1)[1]
+                try:
+                    y[0]=y[0].split(": ",1)[1]
+                except IndexError:
+                    y[0]=y[0].split(". ",1)[1]
             if (not x or not(len(x[0])>=16 and len(x[0])<=17)) and not y:
                 continue
             else:
-                if not x and len(y)>1:
-                    #print(y[0])
+                if not x:
+                    print(y[0])
                     num.append(y[0])
+                    break
                 else:
-                    #print(x[0])
+                    print(x[0])
                     num.append(x[0])
+                    break
