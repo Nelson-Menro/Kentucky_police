@@ -48,7 +48,7 @@ def remove_prefix(x):
 #Uses the glob library to iterate over files on local device like one would in a stored array
 #The tqdm in front of the body of the loop here will cause a progress bar output
 #Make sure you adjust the file path to match your machine
-for filepath in tqdm(glob.iglob('/Users/nelson/Downloads/Suits_1002.pdf')):
+for filepath in tqdm(glob.iglob('')):
     num=[]
     print('file path is ' + filepath)
     #Makes sure pdf reader closes when we are done with it
