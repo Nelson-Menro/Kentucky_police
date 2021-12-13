@@ -146,7 +146,17 @@ for filepath in tqdm(glob.iglob(r'C:\Users\steel\Documents\NACDL\*.pdf')):
                         df.loc[counter,'Court_Name']=court5[0]
                         print(court5[0])
                         break
-
+        for page in range (pageNum):
+            currentPage=pdf.getPage(page).extractText()
+            #regex gets two names
+            x = re.findall("Judge\s[0-9a-zA-Z_]+\s[0-9a-zA-Z_]+", currentPage)
+            #print(x)
+            x = remove_prefix(x)
+            if(len(x) > 0):
+                different_judges.update(x)
+                df.loc[counter,'Judge_Name']=x[0]
+                print(x[0])
+                break
 
 #exports csv
 
