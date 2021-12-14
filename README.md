@@ -1,6 +1,27 @@
-# Kentucky_police
+# DMV_police
+The files include both the main extraction and several frameworks for future extraction.  They are as follows:
+
+CaseName.py: A framework for Case caption that is in progress and can be expanded upon
+CaseNumberExtractionOneDocument.py: A framework script utilizing a deepscan (see below) for case number extraction
+Final_Output_NACDL.csv: The final error checked csv file made from the master extractor
+MasterExtractor.py: The main program that, when ran, will collect and output case number, filename, judge, court name, and filing date to a csv
+PsuedoDocumentPages.py: Basic proof of concept to get page numbers from a set of documents
+ScanLater.txt: A collection of documents unable to be properly parsed or outliers to the dataset
+SimpleExtractionTextPDF.py: Demonstration of text extraction using a deep scan method (see below)
+UpdatedSort.py: Framework for extracting a documents case number more efficiently than deep scan
+brennanextraction: Demonstration of date extraction via deep scan (see below)
+date_and_court: The date and court name script that was combined with MasterExtractor.py
+dateforloop: The date script that was added to MasterExtractor.py
+findjudgeName.py: The script for finding judge name that was added to MasterExtractor.py
+removeFiles.py: Script for removing outlier files from a filepath given target files
 
 
+
+
+
+
+
+# FOR UTILIZING ANY SCRIPTS THAT USE PYTESSERACT DEEP SCAN
 # HOW TO PREPARE TO EXTRACT TEXT FROM IMAGES
 
 1. First prepare use of tesseract  
